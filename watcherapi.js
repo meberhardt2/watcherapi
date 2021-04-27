@@ -15,7 +15,7 @@ app.use(express.json({limit: '50mb'}));
 
 if(ip.includes("10.192.106")){
     const http = require('http');
-    http.createServer(app).listen(2004);
+    http.createServer(app).listen(2006);
 }
 else{
     const https = require('https');
