@@ -1,0 +1,140 @@
+[
+  {
+    episodes: [
+      {
+        episode: 1,
+        id: '/title/tt13049798/',
+        season: 1,
+        title: 'Declaration of Independence',
+        titleType: 'tvEpisode',
+        year: 2020
+      },
+      {
+        episode: 2,
+        id: '/title/tt13049808/',
+        season: 1,
+        title: 'Unknown and Uncharted',
+        titleType: 'tvEpisode',
+        year: 2020
+      },
+      {
+        episode: 3,
+        id: '/title/tt13055994/',
+        season: 1,
+        title: 'Living on the Edge',
+        titleType: 'tvEpisode',
+        year: 2020
+      },
+      {
+        episode: 4,
+        id: '/title/tt13055998/',
+        season: 1,
+        title: 'The Struggle Begins',
+        titleType: 'tvEpisode',
+        year: 2020
+      },
+      {
+        episode: 5,
+        id: '/title/tt13067364/',
+        season: 1,
+        title: 'Alaskan Built',
+        titleType: 'tvEpisode',
+        year: 2020
+      },
+      {
+        episode: 6,
+        id: '/title/tt13067382/',
+        season: 1,
+        title: 'The Ice Harvest',
+        titleType: 'tvEpisode',
+        year: 2020
+      },
+      {
+        episode: 7,
+        id: '/title/tt13067396/',
+        season: 1,
+        title: 'Over Thin Ice',
+        titleType: 'tvEpisode',
+        year: 2020
+      },
+      {
+        episode: 8,
+        id: '/title/tt13067398/',
+        season: 1,
+        title: 'Trail Breakers',
+        titleType: 'tvEpisode',
+        year: 2020
+      }
+    ],
+    season: 1
+  },
+  {
+    episodes: [
+      {
+        episode: 1,
+        id: '/title/tt13885120/',
+        season: 2,
+        title: 'In the Blood',
+        titleType: 'tvEpisode',
+        year: 2021
+      },
+      {
+        episode: 2,
+        id: '/title/tt13975692/',
+        season: 2,
+        title: 'Hard Luck',
+        titleType: 'tvEpisode',
+        year: 2021
+      },
+      {
+        episode: 3,
+        id: '/title/tt13975676/',
+        season: 2,
+        title: 'Too Young to Die',
+        titleType: 'tvEpisode',
+        year: 2021
+      },
+      {
+        episode: 4,
+        id: '/title/tt14029526/',
+        season: 2,
+        title: 'Ghost in the Woods',
+        titleType: 'tvEpisode',
+        year: 2021
+      },
+      {
+        episode: 5,
+        id: '/title/tt14119048/',
+        season: 2,
+        title: 'The Hard Way',
+        titleType: 'tvEpisode',
+        year: 2021
+      },
+      {
+        episode: 6,
+        id: '/title/tt14119060/',
+        season: 2,
+        title: 'Predator Proof',
+        titleType: 'tvEpisode',
+        year: 2021
+      },
+      {
+        episode: 7,
+        id: '/title/tt14402054/',
+        season: 2,
+        title: 'Living Wild',
+        titleType: 'tvEpisode',
+        year: 2021
+      },
+      {
+        episode: 8,
+        id: '/title/tt14402060/',
+        season: 2,
+        title: 'New Chances',
+        titleType: 'tvEpisode',
+        year: 2021
+      }
+    ],
+    season: 2
+  }
+]

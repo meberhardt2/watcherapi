@@ -1,0 +1,15 @@
+{
+  "name": "kitchenapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "kitchenapi.js",
+  "author": "matthew.eberhardt@gmail.com",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "better-sqlite3": "^7.1.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "fs": "*",
+    "my-local-ip": "^1.0.0"
+  }
+}
