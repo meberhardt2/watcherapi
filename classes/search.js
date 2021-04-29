@@ -30,8 +30,8 @@ module.exports = class search{
         });
         */
 
-        let temp = [];
-        temp.push(
+        let results = [];
+        results.push(
             {
                 i: {
                   height: 444,
@@ -70,8 +70,13 @@ module.exports = class search{
                 yr: '2013-'
               }
         );
+        
+        let data_out = {
+            results: results,
+            total: 1
+        }
 
-        return(temp)
+        return(data_out)
     }
 	/********************************************/
 
