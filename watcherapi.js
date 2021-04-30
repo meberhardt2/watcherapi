@@ -1,19 +1,21 @@
 const express = require("express");
 const cors = require('cors');
-const axios = require("axios");
 const fs = require('fs');
 const creds = JSON.parse(fs.readFileSync(__dirname+'/../conf/watcherapi.json', 'UTF-8'));
-const util = require('util');
 const ip = require('my-local-ip')();
 const allowed_ip = ip.replace(/(?:\.\d+){1}$/, '');
 
 const search = require('./routes/search');
 const tracking = require('./routes/tracking');
 
+//console.log(util.inspect(response.data, false, null, true));
+//const util = require('util');
+
 
 const app = express();
 app.use(cors());
 app.use(express.json({limit: '50mb'}));
+
 
 if(ip.includes("10.192.106")){
     const http = require('http');
@@ -30,46 +32,12 @@ else{
 
 
 //node-sqlite3 runs asynchronous, which leads to promise mess of chaining. better-sqlite3 runs synchronously
-//const DB_PATH = __dirname+'/sqlite.db';
-//const sqlite3 = require('better-sqlite3');
-//const DB = new sqlite3(DB_PATH);
+const DB_PATH = __dirname+'/sqlite.db';
+const sqlite3 = require('better-sqlite3');
+const DB = new sqlite3(DB_PATH);
 
 
-search(app,creds,axios);
-tracking(app,allowed_ip);
+//Routes
+search(app,creds);
+tracking(app,DB,allowed_ip);
 
-/*
-
-const options = {
-    method: 'GET',
-    url: 'https://imdb8.p.rapidapi.com/auto-complete',
-    params: {q: 'life below zero'},
-    headers: {
-        'x-rapidapi-key': creds.rapidapi.key,
-        'x-rapidapi-host': 'imdb8.p.rapidapi.com'
-    }
-};
-
-axios.request(options).then(function (response) {
-    console.log(util.inspect(response.data, false, null, true));
-}).catch(function (error) {
-    console.error(error);
-});
-
-
-const options = {
-    method: 'GET',
-    url: 'https://imdb8.p.rapidapi.com/title/get-seasons',
-    params: {tconst: 'tt13049144'},
-    headers: {
-        'x-rapidapi-key': creds.rapidapi.key,
-        'x-rapidapi-host': 'imdb8.p.rapidapi.com'
-    }
-};
-
-axios.request(options).then(function (response) {
-    console.log(util.inspect(response.data, false, null, true));
-}).catch(function (error) {
-    console.error(error);
-});
-*/
