@@ -5,8 +5,10 @@ const fs = require('fs');
 const creds = JSON.parse(fs.readFileSync(__dirname+'/../conf/watcherapi.json', 'UTF-8'));
 const util = require('util');
 const ip = require('my-local-ip')();
+const allowed_ip = ip.replace(/(?:\.\d+){1}$/, '');
 
 const search = require('./routes/search');
+const tracking = require('./routes/tracking');
 
 
 const app = express();
@@ -33,7 +35,8 @@ else{
 //const DB = new sqlite3(DB_PATH);
 
 
-search(app,creds);
+search(app,creds,axios);
+tracking(app,allowed_ip);
 
 /*
 
