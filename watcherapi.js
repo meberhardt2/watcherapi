@@ -3,10 +3,11 @@ const cors = require('cors');
 const fs = require('fs');
 const creds = JSON.parse(fs.readFileSync(__dirname+'/../conf/watcherapi.json', 'UTF-8'));
 const ip = require('my-local-ip')();
-const allowed_ip = ip.replace(/(?:\.\d+){1}$/, '');
+const allowed_ip = ip.replace(/(?:\.\d+){1}$/, '');     //only allow devices on the same network (local) to make updates
 
 const search = require('./routes/search');
 const tracking = require('./routes/tracking');
+const streams = require('./routes/streams');
 
 //console.log(util.inspect(response.data, false, null, true));
 //const util = require('util');
@@ -40,4 +41,5 @@ const DB = new sqlite3(DB_PATH);
 //Routes
 search(app,creds);
 tracking(app,DB,allowed_ip);
+streams(app,DB,allowed_ip);
 

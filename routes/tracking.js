@@ -8,8 +8,9 @@ const tracking = (app,DB,allowed_ip) => {
             const Tracking = require('../classes/tracking');
             let tracking = new Tracking(DB);
 
-            tracking.id = request.body;
-            tracking.trackit();
+            tracking.imdb_id = request.body.id;
+            tracking.stream_name = request.body.stream_name;
+            tracking.trackIt();
             
             response.json({'status': tracking.status});
 		}
